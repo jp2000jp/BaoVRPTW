@@ -31,7 +31,7 @@ def main():
     files.append("../Datos/R1_4_2.txt") #14
     files.append("../Datos/R2_10_10.txt") #15
 
-    aco = VRPTWACO.VRPTW_ACO(filename=files[12], seed=seed, n_ants=25, alpha=1, beta=10, rho=0.9)
+    aco = VRPTWACO.VRPTW_ACO(filename=files[1], seed=seed, n_ants=25, alpha=1, beta=10, rho=0.9)
 
     aco.optimize(200)
 
