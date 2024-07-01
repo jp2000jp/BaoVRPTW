@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>main_aco.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #7a7e85;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main_aco.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">random</span>
+
+<span class="s0">import </span><span class="s1">VRPTWACO </span><span class="s0">as </span><span class="s1">VRPTWACO</span>
+
+
+<span class="s0">def </span><span class="s1">main</span><span class="s2">():</span>
+    <span class="s1">files </span><span class="s2">= []</span>
+    <span class="s1">seed </span><span class="s2">= </span><span class="s1">random</span><span class="s2">.</span><span class="s1">randint</span><span class="s2">(-</span><span class="s3">20000000</span><span class="s2">, </span><span class="s3">20000000</span><span class="s2">)</span>
+
+    <span class="s4">#seed = -2003468</span>
+
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/C001.txt&quot;</span><span class="s2">) </span><span class="s4">#0</span>
+
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/C101.txt&quot;</span><span class="s2">) </span><span class="s4">#1</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/C102.txt&quot;</span><span class="s2">)</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/C103.txt&quot;</span><span class="s2">)</span>
+
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R101.txt&quot;</span><span class="s2">) </span><span class="s4">#4</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R102.txt&quot;</span><span class="s2">)</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R103.txt&quot;</span><span class="s2">)</span>
+
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/C1_2_1.txt&quot;</span><span class="s2">) </span><span class="s4">#7</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/C1_2_2.txt&quot;</span><span class="s2">)</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/C1_2_3.txt&quot;</span><span class="s2">)</span>
+
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R1_2_1.txt&quot;</span><span class="s2">) </span><span class="s4">#10</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R1_2_2.txt&quot;</span><span class="s2">)</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R1_2_3.txt&quot;</span><span class="s2">)</span>
+
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R1_2_4.txt&quot;</span><span class="s2">) </span><span class="s4">#13</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R1_4_2.txt&quot;</span><span class="s2">) </span><span class="s4">#14</span>
+    <span class="s1">files</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s5">&quot;../Datos/R2_10_10.txt&quot;</span><span class="s2">) </span><span class="s4">#15</span>
+
+    <span class="s1">aco </span><span class="s2">= </span><span class="s1">VRPTWACO</span><span class="s2">.</span><span class="s1">VRPTW_ACO</span><span class="s2">(</span><span class="s1">filename</span><span class="s2">=</span><span class="s1">files</span><span class="s2">[</span><span class="s3">5</span><span class="s2">], </span><span class="s1">seed</span><span class="s2">=</span><span class="s1">seed</span><span class="s2">, </span><span class="s1">n_ants</span><span class="s2">=</span><span class="s3">25</span><span class="s2">, </span><span class="s1">alpha</span><span class="s2">=</span><span class="s3">1</span><span class="s2">, </span><span class="s1">beta</span><span class="s2">=</span><span class="s3">10</span><span class="s2">, </span><span class="s1">rho</span><span class="s2">=</span><span class="s3">0.9</span><span class="s2">)</span>
+
+    <span class="s1">aco</span><span class="s2">.</span><span class="s1">optimize</span><span class="s2">(</span><span class="s3">1000</span><span class="s2">)</span>
+    <span class="s1">aco</span><span class="s2">.</span><span class="s1">print_solutions</span><span class="s2">()</span>
+    <span class="s1">aco</span><span class="s2">.</span><span class="s1">routes_graph</span><span class="s2">()</span>
+    <span class="s1">aco</span><span class="s2">.</span><span class="s1">pareto_graph</span><span class="s2">()</span>
+    <span class="s1">aco</span><span class="s2">.</span><span class="s1">best_solution_graph</span><span class="s2">()</span>
+    <span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Semilla: &quot;</span><span class="s2">, </span><span class="s1">seed</span><span class="s2">)</span>
+    <span class="s1">aco</span><span class="s2">.</span><span class="s1">calculate_v_value</span><span class="s2">()</span>
+    <span class="s1">aco</span><span class="s2">.</span><span class="s1">v_value_graph</span><span class="s2">()</span>
+
+
+<span class="s0">if </span><span class="s1">__name__ </span><span class="s2">== </span><span class="s5">'__main__'</span><span class="s2">:</span>
+    <span class="s1">main</span><span class="s2">()</span>
+</pre>
+</body>
+</html>
